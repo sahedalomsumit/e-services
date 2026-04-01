@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FAQ's | E-Service Parts — UK's Independent Spares & Service Specialist</title>
+<meta name="description" content="Frequently Asked Questions about E-Service. Find answers about our parts, repair services, and trade accounts."/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1D2044;
+  --navy-dark:#13162E;
+  --navy-deeper:#0D1020;
+  --navy-mid:#252952;
+  --navy-light:#2E3470;
+  --accent:#3D82F5;
+  --accent-light:#6BA4FF;
+  --accent-pale:#EBF2FF;
+  --teal:#00B4C6;
+  --orange:#F5821F;
+  --green:#00A67E;
+  --red:#E53030;
+  --bg:#F0F1F5;
+  --white:#FFFFFF;
+  --border:#E4E6EF;
+  --text:#0F1117;
+  --text-mid:#374151;
+  --muted:#6B7280;
+  --radius:10px;
+  --shadow-sm:0 1px 4px rgba(0,0,0,0.06);
+  --shadow:0 2px 16px rgba(0,0,0,0.08);
+  --shadow-hover:0 8px 32px rgba(0,0,0,0.13);
+}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;font-size:14px;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:'Sora',sans-serif}
+img{display:block;max-width:100%}
+
+/* ─── TOP BAR ─── */
+.topbar{background:var(--navy-deeper);color:rgba(255,255,255,0.65);font-size:12px;padding:9px 0}
+.topbar-inner{max-width:1480px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.topbar-left{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.topbar-right{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.topbar a:hover{color:#fff}
+.topbar select{background:transparent;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-family:'Sora',sans-serif;font-size:11px;padding:3px 8px;border-radius:4px}
+.tdiv{width:1px;height:13px;background:rgba(255,255,255,0.15);flex-shrink:0}
+
+/* ─── HEADER ─── */
+.header{background:var(--navy);position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,0.3)}
+.header-main{max-width:1480px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:16px;height:68px}
+.logo{display:flex;align-items:center;flex-shrink:0;padding:4px 8px;border:2px solid transparent;border-radius:6px;transition:border-color .15s}
+.logo:hover{border-color:rgba(255,255,255,0.35)}
+.logo img{height:38px;width:auto;object-fit:contain;display:block}
+.search-wrap{flex:1;display:flex;border-radius:8px;overflow:hidden;max-width:700px;height:42px}
+.search-input{flex:1;border:none;outline:none;font-family:'Sora',sans-serif;font-size:13px;padding:0 18px;color:var(--text);background:white}
+.search-input::placeholder{color:#aaa}
+.search-btn{background:var(--accent);border:none;width:50px;display:flex;align-items:center;justify-content:center;transition:background .15s;flex-shrink:0}
+.search-btn:hover{background:#2563eb}
+.search-btn svg{width:19px;height:19px;stroke:white;fill:none;stroke-width:2.5}
+.hdr-btn{display:flex;flex-direction:column;color:white;padding:6px 10px;border:2px solid transparent;border-radius:6px;transition:border-color .15s;cursor:pointer;flex-shrink:0}
+.hdr-btn:hover{border-color:rgba(255,255,255,0.35)}
+.hdr-btn-top{font-size:10px;color:rgba(255,255,255,0.6)}
+.hdr-btn-bot{font-size:13px;font-weight:700;white-space:nowrap}
+.cart{display:flex;align-items:center;gap:7px;color:white;padding:6px 10px;border:2px solid transparent;border-radius:6px;transition:border-color .15s;cursor:pointer;flex-shrink:0;position:relative}
+.cart:hover{border-color:rgba(255,255,255,0.35)}
+.cart svg{width:28px;height:28px;stroke:white;fill:none;stroke-width:1.6}
+.cart-n{position:absolute;top:4px;left:26px;background:var(--orange);color:white;font-size:10px;font-weight:800;border-radius:50%;width:19px;height:19px;display:flex;align-items:center;justify-content:center}
+.cart-lbl{font-size:13px;font-weight:700}
+.mob-menu-btn{display:none;background:transparent;border:none;color:white;padding:6px}
+.mob-menu-btn svg{width:24px;height:24px;stroke:white;fill:none;stroke-width:2}
+
+/* ─── NAVBAR ─── */
+.navbar{background:var(--navy-mid)}
+.navbar-inner{max-width:1480px;margin:0 auto;padding:0 32px;display:flex;align-items:center;height:40px;overflow-x:auto;overflow-y:hidden;gap:2px;scrollbar-width:none}
+.navbar-inner::-webkit-scrollbar{display:none}
+.ni{display:flex;align-items:center;gap:5px;color:rgba(255,255,255,0.88);font-size:12.5px;font-weight:500;padding:0 13px;height:100%;border:1px solid transparent;border-radius:4px;white-space:nowrap;transition:border-color .12s;cursor:pointer}
+.ni:hover{border-color:white}
+.ni.all{font-weight:700;gap:8px}
+.ni.all svg{width:17px;height:17px;stroke:white;fill:none;stroke-width:2}
+.nsp{flex:1;min-width:8px}
+.ni.deals{color:#FFD700;font-weight:700}
+.ni.new{color:#86EFAC;font-weight:700}
+
+/* ─── PAGE WRAPPER ─── */
+.page{max-width:1480px;margin:0 auto;padding:0 32px}
+.row{margin-top:20px}
+
+/* ─── BREADCRUMB ─── */
+.breadcrumb{padding:16px 0 4px;font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.breadcrumb a{color:var(--accent);transition:color .12s}
+.breadcrumb a:hover{color:var(--navy);text-decoration:underline}
+.breadcrumb-sep{color:var(--border)}
+
+/* ─── FAQ HERO ─── */
+.about-hero{background:linear-gradient(115deg,var(--navy-deeper) 0%,var(--navy) 50%,#1a3a6e 100%);border-radius:var(--radius);padding:56px 72px;position:relative;overflow:hidden;text-align:center;display:flex;flex-direction:column;align-items:center}
+.about-hero::before{content:'';position:absolute;right:-80px;top:-80px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(61,130,245,0.16) 0%,transparent 65%);pointer-events:none}
+.about-hero::after{content:'';position:absolute;left:10%;bottom:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%);pointer-events:none}
+.about-hero-inner{position:relative;z-index:1;max-width:780px}
+.about-hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);color:rgba(255,255,255,0.8);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:100px;margin-bottom:24px}
+.about-hero h1{font-size:clamp(30px,3.5vw,46px);font-weight:800;color:white;line-height:1.08;letter-spacing:-1px;margin-bottom:16px}
+.about-hero h1 em{font-style:normal;color:var(--accent-light)}
+.about-hero-desc{font-size:15px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.75;max-width:600px;margin:0 auto}
+
+/* ─── FAQ ACCORDION ─── */
+.faq-section {
+  max-width: 860px;
+  margin: 40px auto 60px;
+}
+.faq-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.faq-item:hover {
+  border-color: rgba(61,130,245,0.25);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.faq-header {
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 16px;
+  user-select: none;
+}
+.faq-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.4;
+}
+.faq-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-pale);
+  color: var(--accent);
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s;
+}
+.faq-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.5;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  background: var(--accent);
+  color: white;
+}
+.faq-item.active .faq-header {
+  border-bottom: 1px solid transparent;
+}
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.faq-content-inner {
+  padding: 0 32px 28px;
+  font-size: 14.5px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ─── CTA BANNER ─── */
+.cta-banner{border-radius:var(--radius);padding:48px 56px;display:flex;align-items:center;justify-content:space-between;gap:40px;position:relative;overflow:hidden;background:linear-gradient(110deg,var(--navy-deeper) 0%,var(--navy) 55%,#1a3a6e 100%)}
+.cta-banner::after{content:'';position:absolute;right:-60px;top:-60px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(61,130,245,0.18) 0%,transparent 65%);pointer-events:none}
+.cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent-light);margin-bottom:12px}
+.cta-title{font-size:30px;font-weight:800;color:white;letter-spacing:-.8px;line-height:1.15;margin-bottom:12px}
+.cta-desc{font-size:14px;color:rgba(255,255,255,.52);font-weight:300;max-width:460px;line-height:1.7}
+.cta-btns{display:flex;gap:12px;flex-shrink:0;position:relative;z-index:1}
+.btn-p{background:var(--accent);color:white;border:none;font-family:'Sora',sans-serif;font-size:13px;font-weight:600;padding:13px 26px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:background .15s,transform .12s;cursor:pointer}
+.btn-p:hover{background:#2563eb;transform:translateY(-1px)}
+.btn-g{background:rgba(255,255,255,0.09);color:white;border:1px solid rgba(255,255,255,0.22);font-family:'Sora',sans-serif;font-size:13px;font-weight:500;padding:13px 26px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:all .15s;cursor:pointer}
+.btn-g:hover{background:rgba(255,255,255,0.16)}
+
+/* ─── FOOTER ─── */
+.back-top{background:var(--navy-mid);color:white;text-align:center;padding:13px;font-size:13px;font-weight:500;cursor:pointer;transition:background .15s}
+.back-top:hover{background:var(--navy-light)}
+footer{background:var(--navy-deeper);padding:52px 0 0}
+.footer-inner{max-width:1480px;margin:0 auto;padding:0 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07)}
+.f-logo img{height:32px;width:auto;object-fit:contain;display:block}
+.f-desc{font-size:12px;color:rgba(255,255,255,.38);line-height:1.75;font-weight:300;margin-bottom:18px;margin-top:16px}
+.f-badges{display:flex;gap:7px;flex-wrap:wrap}
+.f-badge{background:rgba(255,255,255,.05);color:rgba(255,255,255,.45);font-size:10px;font-weight:600;padding:4px 11px;border-radius:100px;border:1px solid rgba(255,255,255,.08)}
+.f-col-title{font-size:12.5px;font-weight:700;color:white;margin-bottom:14px;letter-spacing:.3px}
+.f-links{display:flex;flex-direction:column;gap:9px}
+.f-links a{font-size:12px;color:rgba(255,255,255,.42);transition:color .12s;font-weight:300}
+.f-links a:hover{color:rgba(255,255,255,.85);text-decoration:underline}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding:20px 0;font-size:11.5px;color:rgba(255,255,255,.28);flex-wrap:wrap;gap:10px}
+.fb-links{display:flex;gap:18px;flex-wrap:wrap}
+.fb-links a{color:rgba(255,255,255,.38);transition:color .12s}
+.fb-links a:hover{color:white}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1200px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media(max-width:900px){
+  .topbar-inner{padding:0 20px}
+  .header-main{padding:0 20px;gap:10px;height:60px}
+  .logo img{height:32px}
+  .hdr-btn{display:none}
+  .page{padding:0 20px}
+  .navbar-inner{padding:0 16px}
+  .about-hero{padding:44px 36px}
+  .cta-banner{flex-direction:column;align-items:flex-start;padding:36px 32px;gap:24px}
+  .cta-btns{flex-direction:row}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .row{margin-top:16px}
+  .faq-section {margin: 32px auto 48px;}
+}
+@media(max-width:640px){
+  .topbar{display:none}
+  .header-main{padding:0 16px;height:56px;gap:8px}
+  .logo img{height:28px}
+  .cart-lbl{display:none}
+  .mob-menu-btn{display:flex}
+  .navbar-inner{padding:0 12px;height:36px}
+  .ni{font-size:12px;padding:0 10px}
+  .page{padding:0 16px}
+  .about-hero{padding:36px 24px}
+  .about-hero h1{font-size:clamp(26px,6vw,32px)}
+  .faq-header { padding: 20px; }
+  .faq-content-inner { padding: 0 20px 24px; }
+  .faq-title { font-size: 14.5px; }
+  .cta-banner{padding:28px 24px}
+  .cta-title{font-size:22px}
+  .cta-btns{flex-wrap:wrap}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+  .footer-inner{padding:0 20px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}
+  .row{margin-top:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span>🇬🇧 UK's #1 Independent Parts Supplier Since 2004</span>
+      <div class="tdiv"></div>
+      <a href="#">📦 Free dispatch on orders over £150</a>
+      <div class="tdiv"></div>
+      <a href="#">🔧 Trade Accounts — Exclusive Pricing</a>
+    </div>
+    <div class="topbar-right">
+      <select><option>🇬🇧 GBP £</option><option>🇺🇸 USD $</option><option>🇪🇺 EUR €</option></select>
+      <select><option>🇺🇸 EN</option><option>🇫🇷 FR</option></select>
+      <div class="tdiv"></div>
+      <a href="#">Newsletter</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-main">
+    <a href="index.html" class="logo">
+      <img src="https://e-service.parts/wp-content/uploads/2025/11/E-Service-Logo-White-01-scaled.webp" alt="E-Service Parts"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span style="display:none;font-size:19px;font-weight:800;color:white;letter-spacing:-0.5px">E-<span style="color:#6BA4FF">Service</span></span>
+    </a>
+    <div class="search-wrap">
+      <input class="search-input" type="text" placeholder="Search parts, displays, bill validators, coin mechs…"/>
+      <button class="search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+    </div>
+    <div class="hdr-btn"><span class="hdr-btn-top">Hello, Sign in</span><span class="hdr-btn-bot">Account &amp; Orders</span></div>
+    <div class="hdr-btn"><span class="hdr-btn-top">Saved</span><span class="hdr-btn-bot">Wishlist</span></div>
+    <div class="cart">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span class="cart-n">0</span>
+      <span class="cart-lbl">Basket</span>
+    </div>
+    <button class="mob-menu-btn" aria-label="Menu">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="ni all" href="#">
+      <svg viewBox="0 0 24 24" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>All
+    </a>
+    <a class="ni" href="#">Display &amp; Touch</a>
+    <a class="ni" href="#">Print &amp; Scan</a>
+    <a class="ni" href="#">Components &amp; Consumables</a>
+    <a class="ni" href="#">Service &amp; Repair</a>
+    <a class="ni" href="#">Cue Sports</a>
+    <a class="ni" href="#">Change Machines</a>
+    <a class="ni" href="#">Biometrics &amp; Security</a>
+    <div class="nsp"></div>
+    <a class="ni deals" href="#">🏷 Trade Deals</a>
+  </div>
+</nav>
+
+<!-- PAGE -->
+<div class="page">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="#">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>FAQ's</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="about-hero row">
+    <div class="about-hero-inner">
+      <div class="about-hero-eyebrow">Support &amp; Answers</div>
+      <h1>Frequently Asked <em>Questions</em></h1>
+      <p class="about-hero-desc">Find answers to our most common questions about our parts, repair services, and trade accounts. Need more help? Contact our dedicated support team.</p>
+    </div>
+  </div>
+
+  <!-- FAQ ACCORDION SECTION -->
+  <div class="faq-section">
+    
+    <!-- FAQ 1 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <div class="faq-title">What industries does E-Service support?</div>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-content">
+        <div class="faq-content-inner">
+          E-Service provides spares, repairs, and after-sales services for the amusement, gaming, vending, and related machine-based industries.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <div class="faq-title">What types of products can E-Service repair or service?</div>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-content">
+        <div class="faq-content-inner">
+          We support a wide range of components including bill validators, coin mechanisms, touchscreens, printers, hoppers, and many other electronic and mechanical parts.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <div class="faq-title">Do you offer both on-site and workshop repair services?</div>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-content">
+        <div class="faq-content-inner">
+          Yes. We provide flexible service options, including professional in-house repairs and reliable on-site support depending on customer requirements.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <div class="faq-title">Can E-Service supply replacement parts?</div>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-content">
+        <div class="faq-content-inner">
+          Absolutely. We source and supply genuine replacement parts from trusted manufacturers to ensure high performance and long-term reliability.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <div class="faq-title">How quickly can repairs be completed?</div>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-content">
+        <div class="faq-content-inner">
+          Repair turnaround times vary depending on the component and its condition, but we aim to provide fast, efficient, and accurate service to minimise customer downtime.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 6 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <div class="faq-title">Does E-Service offer technical support or troubleshooting?</div>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-content">
+        <div class="faq-content-inner">
+          Yes. Our technicians offer professional technical support, diagnostics, and advice to help operators resolve issues as quickly as possible.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 7 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <div class="faq-title">Do you work with international manufacturers?</div>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-content">
+        <div class="faq-content-inner">
+          We maintain strong partnerships with major component manufacturers, enabling us to access the latest products, training, and technical resources.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 8 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <div class="faq-title">Can customers set up an ongoing service or maintenance plan?</div>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-content">
+        <div class="faq-content-inner">
+          Yes. We offer flexible maintenance plans tailored to operational needs, helping businesses keep machines running smoothly throughout the year.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 9 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <div class="faq-title">How can I send a part for repair?</div>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-content">
+        <div class="faq-content-inner">
+          You can ship your components directly to our service centre. Once received, our team will assess, repair, and return your items promptly.
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 10 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <div class="faq-title">How do I contact E-Service for support or inquiries?</div>
+        <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="faq-content">
+        <div class="faq-content-inner">
+          You can reach us through our customer service team by phone or email. We also provide a quick-response support option for urgent issues.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner row">
+    <div>
+      <div class="cta-eyebrow">Still have questions?</div>
+      <div class="cta-title">We're Here to Help</div>
+      <div class="cta-desc">If you couldn't find the answer to your question, our dedicated support team is ready to assist you with any spare parts or service inquiries.</div>
+    </div>
+    <div class="cta-btns">
+      <a href="#" class="btn-p">Contact Support</a>
+      <a href="#" class="btn-g">Call Us Direct</a>
+    </div>
+  </div>
+
+  <div style="height:28px"></div>
+</div><!-- /page -->
+
+<!-- BACK TO TOP -->
+<div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Back to top</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo">
+          <img src="https://e-service.parts/wp-content/uploads/2025/11/E-Service-Logo-White-01-scaled.webp" alt="E-Service Parts"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+          <span style="display:none;font-size:17px;font-weight:800;color:white">E-Service</span>
+        </div>
+        <p class="f-desc">E-Service (Europe) Ltd — Founded in 2004 as the UK's first independent spares, service, and after-sales support company for the amusement, gaming, and vending industries. Serving operators across the UK and Ireland.</p>
+        <div class="f-badges">
+          <span class="f-badge">Eurocoin Partner</span>
+          <span class="f-badge">JCM Authorised</span>
+          <span class="f-badge">Elo Touch Supplier</span>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Get to Know Us</div>
+        <div class="f-links">
+          <a href="#">Home</a>
+          <a href="about-final.html">About Us</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Newsletter</a>
+          <a href="#">Apply for Trade Account</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Popular Categories</div>
+        <div class="f-links">
+          <a href="#">Display &amp; Touch</a>
+          <a href="#">Print &amp; Scan</a>
+          <a href="#">Components &amp; Consumables</a>
+          <a href="#">Service &amp; Repair</a>
+          <a href="#">Cue Sports</a>
+          <a href="#">Biometrics &amp; Security</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Orders &amp; Returns</div>
+        <div class="f-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Return Process</a>
+          <a href="#">Cart</a>
+          <a href="#">Wishlist</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 E-Service (Europe) Ltd. All rights reserved.</span>
+      <div class="fb-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Accordion Logic
+document.querySelectorAll('.faq-header').forEach(button => {
+  button.addEventListener('click', () => {
+    const faqItem = button.parentElement;
+    const isActive = faqItem.classList.contains('active');
+    
+    // Close all other open accordions
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.classList.remove('active');
+      const content = item.querySelector('.faq-content');
+      content.style.maxHeight = null;
+    });
+
+    // Toggle clicked accordion
+    if (!isActive) {
+      faqItem.classList.add('active');
+      const content = faqItem.querySelector('.faq-content');
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
+</script>
+</body>
+</html>

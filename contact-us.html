@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact Us | E-Service Parts — UK's Independent Spares & Service Specialist</title>
+<meta name="description" content="Get in touch with E-Service Parts. Contact us for spare parts, repair services, trade accounts and technical support across the UK and Ireland."/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1D2044;--navy-dark:#13162E;--navy-deeper:#0D1020;--navy-mid:#252952;--navy-light:#2E3470;
+  --accent:#3D82F5;--accent-light:#6BA4FF;--accent-pale:#EBF2FF;
+  --teal:#00B4C6;--orange:#F5821F;--green:#00A67E;--red:#E53030;
+  --bg:#F0F1F5;--white:#FFFFFF;--border:#E4E6EF;
+  --text:#0F1117;--text-mid:#374151;--muted:#6B7280;
+  --radius:10px;--shadow-sm:0 1px 4px rgba(0,0,0,0.06);--shadow:0 2px 16px rgba(0,0,0,0.08);--shadow-hover:0 8px 32px rgba(0,0,0,0.13);
+}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;font-size:14px;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:'Sora',sans-serif}
+img{display:block;max-width:100%}
+
+/* ─── TOP BAR ─── */
+.topbar{background:var(--navy-deeper);color:rgba(255,255,255,0.65);font-size:12px;padding:9px 0}
+.topbar-inner{max-width:1480px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.topbar-left{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.topbar-right{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.topbar a:hover{color:#fff}
+.topbar select{background:transparent;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-family:'Sora',sans-serif;font-size:11px;padding:3px 8px;border-radius:4px}
+.tdiv{width:1px;height:13px;background:rgba(255,255,255,0.15);flex-shrink:0}
+
+/* ─── HEADER ─── */
+.header{background:var(--navy);position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,0.3)}
+.header-main{max-width:1480px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:16px;height:68px}
+.logo{display:flex;align-items:center;flex-shrink:0;padding:4px 8px;border:2px solid transparent;border-radius:6px;transition:border-color .15s}
+.logo:hover{border-color:rgba(255,255,255,0.35)}
+.logo img{height:38px;width:auto;object-fit:contain;display:block}
+.search-wrap{flex:1;display:flex;border-radius:8px;overflow:hidden;max-width:700px;height:42px}
+.search-input{flex:1;border:none;outline:none;font-family:'Sora',sans-serif;font-size:13px;padding:0 18px;color:var(--text);background:white}
+.search-input::placeholder{color:#aaa}
+.search-btn{background:var(--accent);border:none;width:50px;display:flex;align-items:center;justify-content:center;transition:background .15s;flex-shrink:0}
+.search-btn:hover{background:#2563eb}
+.search-btn svg{width:19px;height:19px;stroke:white;fill:none;stroke-width:2.5}
+.hdr-btn{display:flex;flex-direction:column;color:white;padding:6px 10px;border:2px solid transparent;border-radius:6px;transition:border-color .15s;cursor:pointer;flex-shrink:0}
+.hdr-btn:hover{border-color:rgba(255,255,255,0.35)}
+.hdr-btn-top{font-size:10px;color:rgba(255,255,255,0.6)}
+.hdr-btn-bot{font-size:13px;font-weight:700;white-space:nowrap}
+.cart{display:flex;align-items:center;gap:7px;color:white;padding:6px 10px;border:2px solid transparent;border-radius:6px;transition:border-color .15s;cursor:pointer;flex-shrink:0;position:relative}
+.cart:hover{border-color:rgba(255,255,255,0.35)}
+.cart svg{width:28px;height:28px;stroke:white;fill:none;stroke-width:1.6}
+.cart-n{position:absolute;top:4px;left:26px;background:var(--orange);color:white;font-size:10px;font-weight:800;border-radius:50%;width:19px;height:19px;display:flex;align-items:center;justify-content:center}
+.cart-lbl{font-size:13px;font-weight:700}
+.mob-menu-btn{display:none;background:transparent;border:none;color:white;padding:6px}
+.mob-menu-btn svg{width:24px;height:24px;stroke:white;fill:none;stroke-width:2}
+
+/* ─── NAVBAR ─── */
+.navbar{background:var(--navy-mid)}
+.navbar-inner{max-width:1480px;margin:0 auto;padding:0 32px;display:flex;align-items:center;height:40px;overflow-x:auto;overflow-y:hidden;gap:2px;scrollbar-width:none}
+.navbar-inner::-webkit-scrollbar{display:none}
+.ni{display:flex;align-items:center;gap:5px;color:rgba(255,255,255,0.88);font-size:12.5px;font-weight:500;padding:0 13px;height:100%;border:1px solid transparent;border-radius:4px;white-space:nowrap;transition:border-color .12s;cursor:pointer}
+.ni:hover{border-color:white}
+.ni.all{font-weight:700;gap:8px}
+.ni.all svg{width:17px;height:17px;stroke:white;fill:none;stroke-width:2}
+.nsp{flex:1;min-width:8px}
+.ni.deals{color:#FFD700;font-weight:700}
+
+/* ─── PAGE ─── */
+.page{max-width:1480px;margin:0 auto;padding:0 32px}
+.row{margin-top:20px}
+
+/* ─── BREADCRUMB ─── */
+.breadcrumb{padding:16px 0 4px;font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.breadcrumb a{color:var(--accent);transition:color .12s}
+.breadcrumb a:hover{color:var(--navy);text-decoration:underline}
+.breadcrumb-sep{color:var(--border)}
+
+/* ─── HERO ─── */
+.about-hero{background:linear-gradient(115deg,var(--navy-deeper) 0%,var(--navy) 50%,#1a3a6e 100%);border-radius:var(--radius);padding:56px 72px;position:relative;overflow:hidden;text-align:center;display:flex;flex-direction:column;align-items:center}
+.about-hero::before{content:'';position:absolute;right:-80px;top:-80px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(61,130,245,0.16) 0%,transparent 65%);pointer-events:none}
+.about-hero::after{content:'';position:absolute;left:10%;bottom:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%);pointer-events:none}
+.about-hero-inner{position:relative;z-index:1;max-width:780px}
+.about-hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);color:rgba(255,255,255,0.8);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:100px;margin-bottom:24px}
+.about-hero-eyebrow-dot{width:6px;height:6px;background:var(--accent-light);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
+.about-hero h1{font-size:clamp(30px,3.5vw,46px);font-weight:800;color:white;line-height:1.08;letter-spacing:-1px;margin-bottom:16px}
+.about-hero h1 em{font-style:normal;color:var(--accent-light)}
+.about-hero-desc{font-size:15px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.75;max-width:600px;margin:0 auto}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ─── SECTION REUSABLES ─── */
+.section-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.section-title{font-size:26px;font-weight:800;color:var(--text);letter-spacing:-0.7px;line-height:1.2;margin-bottom:20px}
+.section-title em{font-style:normal;color:var(--navy)}
+.body-text{font-size:14px;color:var(--text-mid);line-height:1.8;font-weight:300;margin-bottom:16px}
+.body-text:last-child{margin-bottom:0}
+.content-section{background:white;border-radius:var(--radius);padding:48px 40px;box-shadow:var(--shadow-sm)}
+.section-header{text-align:center;max-width:600px;margin:0 auto 44px}
+
+/* ─── CONTACT INFO CARDS ─── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.contact-cards{display:flex;flex-direction:column;gap:16px}
+.contact-card{display:flex;align-items:flex-start;gap:18px;padding:24px;border-radius:10px;border:1px solid var(--border);transition:box-shadow .2s,border-color .2s,transform .15s;cursor:default}
+.contact-card:hover{box-shadow:var(--shadow-hover);border-color:rgba(61,130,245,0.25);transform:translateY(-2px)}
+.contact-card-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-card-icon svg{width:22px;height:22px;fill:none;stroke-width:1.8}
+.cc-blue{background:var(--accent-pale)}.cc-blue svg{stroke:var(--accent)}
+.cc-green{background:#E6F7F3}.cc-green svg{stroke:var(--green)}
+.cc-orange{background:#FFF3E8}.cc-orange svg{stroke:var(--orange)}
+.cc-teal{background:#E0F9FC}.cc-teal svg{stroke:var(--teal)}
+.contact-card-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px}
+.contact-card-text{font-size:13px;color:var(--muted);line-height:1.65;font-weight:300}
+.contact-card-link{font-size:13px;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:4px;margin-top:6px;transition:gap .15s}
+.contact-card-link:hover{gap:8px;text-decoration:underline}
+
+/* ─── CONTACT FORM ─── */
+.contact-form-wrap{background:linear-gradient(135deg,var(--navy-deeper) 0%,var(--navy) 100%);border-radius:12px;padding:36px;position:relative;overflow:hidden}
+.contact-form-wrap::before{content:'';position:absolute;right:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(61,130,245,0.15) 0%,transparent 65%);pointer-events:none}
+.form-title{font-size:18px;font-weight:700;color:white;margin-bottom:6px}
+.form-subtitle{font-size:13px;color:rgba(255,255,255,0.5);font-weight:300;margin-bottom:28px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:8px;letter-spacing:0.3px}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:13px 16px;font-family:'Sora',sans-serif;font-size:13px;color:white;outline:none;transition:border-color .2s,background .2s}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.3)}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent);background:rgba(255,255,255,0.1)}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-group select{appearance:none;cursor:pointer}
+.form-group select option{background:var(--navy);color:white}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-submit{width:100%;background:var(--accent);color:white;border:none;font-family:'Sora',sans-serif;font-size:14px;font-weight:600;padding:14px;border-radius:8px;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .15s,transform .12s;cursor:pointer;margin-top:4px}
+.form-submit:hover{background:#2563eb;transform:translateY(-1px)}
+.form-submit svg{width:16px;height:16px;stroke:white;fill:none;stroke-width:2}
+
+/* ─── MAP ─── */
+.map-section{background:white;border-radius:var(--radius);padding:0;box-shadow:var(--shadow-sm);overflow:hidden}
+.map-top{padding:32px 40px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.map-info{display:flex;align-items:center;gap:14px}
+.map-pin{width:44px;height:44px;background:var(--accent-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.map-pin svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:2}
+.map-label{font-size:15px;font-weight:700;color:var(--text)}
+.map-addr{font-size:12.5px;color:var(--muted);font-weight:300;margin-top:2px}
+.map-dir-btn{background:var(--accent);color:white;border:none;font-family:'Sora',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;display:inline-flex;align-items:center;gap:6px;transition:background .15s;text-decoration:none}
+.map-dir-btn:hover{background:#2563eb}
+.map-dir-btn svg{width:14px;height:14px;stroke:white;fill:none;stroke-width:2}
+.map-embed{width:100%;height:360px;border:none;display:block}
+
+/* ─── WHY CHOOSE US ─── */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why-card{padding:28px 24px;border-radius:10px;border:1px solid var(--border);transition:box-shadow .2s,border-color .2s,transform .15s;cursor:default;position:relative;overflow:hidden}
+.why-card:hover{box-shadow:var(--shadow-hover);border-color:rgba(61,130,245,0.25);transform:translateY(-3px)}
+.why-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.why-card:hover::after{transform:scaleX(1)}
+.why-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.why-icon svg{width:22px;height:22px;fill:none;stroke-width:1.8}
+.w-blue{background:var(--accent-pale)}.w-blue svg{stroke:var(--accent)}
+.w-green{background:#E6F7F3}.w-green svg{stroke:var(--green)}
+.w-orange{background:#FFF3E8}.w-orange svg{stroke:var(--orange)}
+.w-purple{background:#F3F0FF}.w-purple svg{stroke:#7C3AED}
+.w-teal{background:#E0F9FC}.w-teal svg{stroke:var(--teal)}
+.w-navy{background:rgba(29,32,68,0.07)}.w-navy svg{stroke:var(--navy)}
+.why-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px}
+.why-text{font-size:13px;color:var(--muted);line-height:1.65;font-weight:300}
+
+/* ─── COVERAGE ─── */
+.coverage-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.coverage-regions{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.region-card{padding:20px;border-radius:10px;border:1px solid var(--border);transition:box-shadow .2s,border-color .2s}
+.region-card:hover{box-shadow:var(--shadow);border-color:rgba(61,130,245,0.2)}
+.region-card-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.region-card-title span{font-size:16px}
+.region-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+.region-list li{font-size:12.5px;color:var(--muted);font-weight:300;display:flex;align-items:center;gap:6px}
+.region-list li::before{content:'';width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.coverage-highlight{background:linear-gradient(135deg,var(--navy-deeper) 0%,var(--navy) 100%);border-radius:12px;padding:36px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.coverage-highlight::before{content:'';position:absolute;right:-30px;bottom:-30px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(61,130,245,0.15) 0%,transparent 65%);pointer-events:none}
+.cov-stat{margin-bottom:28px;position:relative}
+.cov-stat:last-child{margin-bottom:0}
+.cov-stat-num{font-size:32px;font-weight:800;color:white;letter-spacing:-1px;line-height:1}
+.cov-stat-num span{color:var(--accent-light)}
+.cov-stat-label{font-size:12px;color:rgba(255,255,255,0.5);margin-top:6px;font-weight:300;line-height:1.5}
+.cov-divider{height:1px;background:rgba(255,255,255,0.1);margin:4px 0}
+
+/* ─── CTA BANNER ─── */
+.cta-banner{border-radius:var(--radius);padding:48px 56px;display:flex;align-items:center;justify-content:space-between;gap:40px;position:relative;overflow:hidden;background:linear-gradient(110deg,var(--navy-deeper) 0%,var(--navy) 55%,#1a3a6e 100%)}
+.cta-banner::after{content:'';position:absolute;right:-60px;top:-60px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(61,130,245,0.18) 0%,transparent 65%);pointer-events:none}
+.cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent-light);margin-bottom:12px}
+.cta-title{font-size:30px;font-weight:800;color:white;letter-spacing:-.8px;line-height:1.15;margin-bottom:12px}
+.cta-desc{font-size:14px;color:rgba(255,255,255,.52);font-weight:300;max-width:460px;line-height:1.7}
+.cta-btns{display:flex;gap:12px;flex-shrink:0;position:relative;z-index:1}
+.btn-p{background:var(--accent);color:white;border:none;font-family:'Sora',sans-serif;font-size:13px;font-weight:600;padding:13px 26px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:background .15s,transform .12s;cursor:pointer}
+.btn-p:hover{background:#2563eb;transform:translateY(-1px)}
+.btn-g{background:rgba(255,255,255,0.09);color:white;border:1px solid rgba(255,255,255,0.22);font-family:'Sora',sans-serif;font-size:13px;font-weight:500;padding:13px 26px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:all .15s;cursor:pointer}
+.btn-g:hover{background:rgba(255,255,255,0.16)}
+
+/* ─── FOOTER ─── */
+.back-top{background:var(--navy-mid);color:white;text-align:center;padding:13px;font-size:13px;font-weight:500;cursor:pointer;transition:background .15s}
+.back-top:hover{background:var(--navy-light)}
+footer{background:var(--navy-deeper);padding:52px 0 0}
+.footer-inner{max-width:1480px;margin:0 auto;padding:0 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07)}
+.f-logo img{height:32px;width:auto;object-fit:contain;display:block}
+.f-desc{font-size:12px;color:rgba(255,255,255,.38);line-height:1.75;font-weight:300;margin-bottom:18px;margin-top:16px}
+.f-badges{display:flex;gap:7px;flex-wrap:wrap}
+.f-badge{background:rgba(255,255,255,.05);color:rgba(255,255,255,.45);font-size:10px;font-weight:600;padding:4px 11px;border-radius:100px;border:1px solid rgba(255,255,255,.08)}
+.f-col-title{font-size:12.5px;font-weight:700;color:white;margin-bottom:14px;letter-spacing:.3px}
+.f-links{display:flex;flex-direction:column;gap:9px}
+.f-links a{font-size:12px;color:rgba(255,255,255,.42);transition:color .12s;font-weight:300}
+.f-links a:hover{color:rgba(255,255,255,.85);text-decoration:underline}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding:20px 0;font-size:11.5px;color:rgba(255,255,255,.28);flex-wrap:wrap;gap:10px}
+.fb-links{display:flex;gap:18px;flex-wrap:wrap}
+.fb-links a{color:rgba(255,255,255,.38);transition:color .12s}
+.fb-links a:hover{color:white}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1200px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+  .topbar-inner{padding:0 20px}
+  .header-main{padding:0 20px;gap:10px;height:60px}
+  .logo img{height:32px}
+  .hdr-btn{display:none}
+  .page{padding:0 20px}
+  .navbar-inner{padding:0 16px}
+  .about-hero{padding:44px 36px}
+  .contact-grid{grid-template-columns:1fr}
+  .coverage-grid{grid-template-columns:1fr}
+  .cta-banner{flex-direction:column;align-items:flex-start;padding:36px 32px;gap:24px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .row{margin-top:16px}
+  .content-section{padding:36px 28px}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .topbar{display:none}
+  .header-main{padding:0 16px;height:56px;gap:8px}
+  .logo img{height:28px}
+  .cart-lbl{display:none}
+  .mob-menu-btn{display:flex}
+  .navbar-inner{padding:0 12px;height:36px}
+  .ni{font-size:12px;padding:0 10px}
+  .page{padding:0 16px}
+  .about-hero{padding:36px 24px}
+  .about-hero h1{font-size:clamp(26px,6vw,32px)}
+  .contact-grid{grid-template-columns:1fr}
+  .contact-form-wrap{padding:28px 20px}
+  .form-row{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .coverage-grid{grid-template-columns:1fr}
+  .coverage-regions{grid-template-columns:1fr}
+  .section-title{font-size:22px}
+  .content-section{padding:28px 20px}
+  .map-top{padding:20px 24px 16px}
+  .map-embed{height:260px}
+  .cta-banner{padding:28px 24px}
+  .cta-title{font-size:22px}
+  .cta-btns{flex-wrap:wrap}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+  .footer-inner{padding:0 20px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}
+  .row{margin-top:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar" role="banner">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span>🇬🇧 UK's #1 Independent Parts Supplier Since 2004</span>
+      <div class="tdiv"></div>
+      <a href="#">📦 Free dispatch on orders over £150</a>
+      <div class="tdiv"></div>
+      <a href="#">🔧 Trade Accounts — Exclusive Pricing</a>
+    </div>
+    <div class="topbar-right">
+      <select><option>🇬🇧 GBP £</option><option>🇺🇸 USD $</option><option>🇪🇺 EUR €</option></select>
+      <select><option>🇺🇸 EN</option><option>🇫🇷 FR</option></select>
+      <div class="tdiv"></div>
+      <a href="#">Newsletter</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-main">
+    <a href="homepage-final.html" class="logo">
+      <img src="https://e-service.parts/wp-content/uploads/2025/11/E-Service-Logo-White-01-scaled.webp" alt="E-Service Parts"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span style="display:none;font-size:19px;font-weight:800;color:white;letter-spacing:-0.5px">E-<span style="color:#6BA4FF">Service</span></span>
+    </a>
+    <div class="search-wrap">
+      <input class="search-input" type="text" placeholder="Search parts, displays, bill validators, coin mechs…" aria-label="Search products"/>
+      <button class="search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+    </div>
+    <div class="hdr-btn"><span class="hdr-btn-top">Hello, Sign in</span><span class="hdr-btn-bot">Account &amp; Orders</span></div>
+    <div class="hdr-btn"><span class="hdr-btn-top">Saved</span><span class="hdr-btn-bot">Wishlist</span></div>
+    <div class="cart">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span class="cart-n">0</span>
+      <span class="cart-lbl">Basket</span>
+    </div>
+    <button class="mob-menu-btn" aria-label="Menu">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- NAVBAR -->
+<nav class="navbar" aria-label="Product categories">
+  <div class="navbar-inner">
+    <a class="ni all" href="#">
+      <svg viewBox="0 0 24 24" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>All
+    </a>
+    <a class="ni" href="#">Display &amp; Touch</a>
+    <a class="ni" href="#">Print &amp; Scan</a>
+    <a class="ni" href="#">Components &amp; Consumables</a>
+    <a class="ni" href="#">Service &amp; Repair</a>
+    <a class="ni" href="#">Cue Sports</a>
+    <a class="ni" href="#">Change Machines</a>
+    <a class="ni" href="#">Biometrics &amp; Security</a>
+    <div class="nsp"></div>
+    <a class="ni deals" href="#">🏷 Trade Deals</a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="page">
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="homepage-final.html">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <span aria-current="page">Contact Us</span>
+  </nav>
+
+  <!-- SECTION 1: HERO -->
+  <section class="about-hero row" aria-labelledby="contact-hero-title">
+    <div class="about-hero-inner">
+      <div class="about-hero-eyebrow">
+        <span class="about-hero-eyebrow-dot"></span>
+        Get In Touch
+      </div>
+      <h1 id="contact-hero-title">Contact <em>Us</em></h1>
+      <p class="about-hero-desc">Have a question about spare parts, repairs, or trade accounts? Our dedicated support team is here to help. Reach out and we'll get back to you as quickly as possible.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: CONTACT INFO + FORM -->
+  <section class="content-section row" aria-labelledby="contact-details-title">
+    <div class="section-header">
+      <div class="section-eyebrow">Reach Out</div>
+      <h2 class="section-title" id="contact-details-title">How to <em>Contact Us</em></h2>
+    </div>
+    <div class="contact-grid">
+      <!-- Left: Info Cards -->
+      <div class="contact-cards">
+        <article class="contact-card">
+          <div class="contact-card-icon cc-blue">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-title">Email Us</div>
+            <div class="contact-card-text">You can contact us directly via email for any enquiries about parts, repairs or trade accounts.</div>
+            <a href="mailto:sales@e-service.parts" class="contact-card-link">sales@e-service.parts →</a>
+          </div>
+        </article>
+        <article class="contact-card">
+          <div class="contact-card-icon cc-green">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-title">Visit Us</div>
+            <address style="font-style:normal">
+              <div class="contact-card-text">Unit 4 Travellers Close,<br/>Welham Green, Hatfield<br/>AL9 7JL, United Kingdom</div>
+            </address>
+            <a href="https://maps.google.com/?q=Unit+4+Travellers+Close+Welham+Green+Hatfield+AL9+7JL" target="_blank" rel="noopener" class="contact-card-link">Get Directions →</a>
+          </div>
+        </article>
+        <article class="contact-card">
+          <div class="contact-card-icon cc-orange">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-title">Business Hours</div>
+            <div class="contact-card-text">Monday – Friday: 9:00 AM – 5:30 PM<br/>Saturday – Sunday: Closed<br/>Bank Holidays: Closed</div>
+          </div>
+        </article>
+        <article class="contact-card">
+          <div class="contact-card-icon cc-teal">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-title">Call Us</div>
+            <div class="contact-card-text">Speak directly to our team for urgent enquiries or technical support during business hours.</div>
+            <a href="tel:+441onal" class="contact-card-link">Contact Sales Team →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <aside class="contact-form-wrap" aria-label="Contact form">
+        <div class="form-title">Send Us a Message</div>
+        <div class="form-subtitle">Fill in the form and we'll get back to you promptly.</div>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Your Name *</label>
+              <input type="text" id="contactName" name="name" placeholder="John Smith" required/>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Your Email *</label>
+              <input type="email" id="contactEmail" name="email" placeholder="john@company.com" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject *</label>
+            <select id="contactSubject" name="subject" required>
+              <option value="" disabled selected>Select a topic…</option>
+              <option value="parts">Spare Parts Enquiry</option>
+              <option value="repair">Repair & Service</option>
+              <option value="trade">Trade Account</option>
+              <option value="technical">Technical Support</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Your Message (optional)</label>
+            <textarea id="contactMessage" name="message" placeholder="Tell us how we can help…" rows="5"></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="contactSubmitBtn">
+            <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Submit Message
+          </button>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SECTION 3: MAP -->
+  <section class="map-section row" aria-labelledby="map-title">
+    <div class="map-top">
+      <div class="map-info">
+        <div class="map-pin">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="map-label" id="map-title">E-Service (Europe) Ltd</div>
+          <div class="map-addr">Unit 4 Travellers Close, Welham Green, Hatfield AL9 7JL, UK</div>
+        </div>
+      </div>
+      <a href="https://maps.google.com/?q=Unit+4+Travellers+Close+Welham+Green+Hatfield+AL9+7JL" target="_blank" rel="noopener" class="map-dir-btn">
+        <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        Get Directions
+      </a>
+    </div>
+    <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2464.8!2d-0.2166!3d51.7367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48763c0ee5bf0d6f%3A0xbca47ad8bf47a39e!2sE-Service%20(Europe)%20Ltd!5e0!3m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="E-Service location map"></iframe>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner row" aria-labelledby="cta-title">
+    <div>
+      <div class="cta-eyebrow">Ready to get started?</div>
+      <div class="cta-title" id="cta-title">Open a Trade<br/>Account Today</div>
+      <div class="cta-desc">Get exclusive pricing, priority support and dedicated account management. Join hundreds of UK operators who trust E-Service for their parts and service needs.</div>
+    </div>
+    <div class="cta-btns">
+      <a href="#" class="btn-p">Apply for Trade Account</a>
+      <a href="faq-final.html" class="btn-g">View FAQ's</a>
+    </div>
+  </section>
+
+  <div style="height:28px"></div>
+</main>
+
+<!-- BACK TO TOP -->
+<div class="back-top" role="button" tabindex="0" onclick="window.scrollTo({top:0,behavior:'smooth'})" onkeypress="if(event.key==='Enter')window.scrollTo({top:0,behavior:'smooth'})">▲ Back to top</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo">
+          <img src="https://e-service.parts/wp-content/uploads/2025/11/E-Service-Logo-White-01-scaled.webp" alt="E-Service Parts"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+          <span style="display:none;font-size:17px;font-weight:800;color:white">E-Service</span>
+        </div>
+        <p class="f-desc">E-Service (Europe) Ltd — Founded in 2004 as the UK's first independent spares, service, and after-sales support company for the amusement, gaming, and vending industries. Serving operators across the UK and Ireland.</p>
+        <div class="f-badges">
+          <span class="f-badge">Eurocoin Partner</span>
+          <span class="f-badge">JCM Authorised</span>
+          <span class="f-badge">Elo Touch Supplier</span>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Get to Know Us</div>
+        <nav class="f-links" aria-label="Company links">
+          <a href="homepage-final.html">Home</a>
+          <a href="about-final.html">About Us</a>
+          <a href="contact-us.html" style="color:rgba(255,255,255,0.75);font-weight:500">Contact Us</a>
+          <a href="#">Newsletter</a>
+          <a href="#">Apply for Trade Account</a>
+        </nav>
+      </div>
+      <div>
+        <div class="f-col-title">Popular Categories</div>
+        <nav class="f-links" aria-label="Category links">
+          <a href="#">Display &amp; Touch</a>
+          <a href="#">Print &amp; Scan</a>
+          <a href="#">Components &amp; Consumables</a>
+          <a href="#">Service &amp; Repair</a>
+          <a href="#">Cue Sports</a>
+          <a href="#">Biometrics &amp; Security</a>
+        </nav>
+      </div>
+      <div>
+        <div class="f-col-title">Orders &amp; Returns</div>
+        <nav class="f-links" aria-label="Order links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Return Process</a>
+          <a href="#">Cart</a>
+          <a href="#">Wishlist</a>
+          <a href="#">My Account</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 E-Service (Europe) Ltd. All rights reserved.</span>
+      <div class="fb-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Form submission handler
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('contactSubmitBtn');
+  const origHTML = btn.innerHTML;
+  btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:white;fill:none;stroke-width:2;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" stroke-dasharray="30" stroke-dashoffset="10"/></svg> Sending…';
+  btn.disabled = true;
+  btn.style.opacity = '0.7';
+  setTimeout(() => {
+    btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:white;fill:none;stroke-width:2.5"><polyline points="20 6 9 17 4 12"/></svg> Message Sent!';
+    btn.style.background = '#00A67E';
+    btn.style.opacity = '1';
+    setTimeout(() => {
+      btn.innerHTML = origHTML;
+      btn.style.background = '';
+      btn.disabled = false;
+      e.target.reset();
+    }, 2500);
+  }, 1500);
+});
+</script>
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+</body>
+</html>
