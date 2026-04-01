@@ -1,4 +1,4 @@
-﻿# E-Services Website
+# E-Services Website
 
 Static multi-page website for **E-Service Parts**, focused on digital signage, kiosk, gaming, and vending machine parts.
 
@@ -12,7 +12,7 @@ This repository contains standalone HTML pages for key storefront and support fl
 
 ## Main Pages
 
-- `homepage-final.html` - Homepage and storefront landing
+- `index.html` - Homepage and storefront landing
 - `shop.html` - Product listing
 - `single-product.html` - Product detail page
 - `cart.html` - Shopping cart
@@ -26,7 +26,7 @@ This repository contains standalone HTML pages for key storefront and support fl
 ## Getting Started
 
 1. Clone or download this repository.
-2. Open `homepage-final.html` in your browser.
+2. Open `index.html` in your browser.
 3. Navigate through links/pages to review the full flow.
 
 ## Notes
